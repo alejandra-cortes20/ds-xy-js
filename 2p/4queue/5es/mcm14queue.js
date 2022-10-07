@@ -1,7 +1,7 @@
 //
 // ES5
 // to complete
-//
+// 2 
 
 function Queue() {
     this.dataStore = []
