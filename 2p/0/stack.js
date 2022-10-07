@@ -1,5 +1,5 @@
 console.log('Hello stack DS world in ES6+\n')
-
+//Ejemplo
 let a=[]
 
 a.push('a')
