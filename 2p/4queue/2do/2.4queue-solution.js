@@ -51,13 +51,13 @@ function mostrar() {
 
 let prueba = new cola();
 
-prueba.entrada("Lehi")
-prueba.entrada("Fernando")
-prueba.entrada("Lupian")
-prueba.entrada("Javier")
-prueba.entrada("Daniela")
+prueba.entrada("rosa")
+prueba.entrada("morado")
+prueba.entrada("azul")
+prueba.entrada("verde")
+prueba.entrada("blanco")
 console.log(prueba.mostrar())
-prueba.entrada("Daniel")
+prueba.entrada("amarillo")
 prueba.salida()
 prueba.salida()
 prueba.salida()

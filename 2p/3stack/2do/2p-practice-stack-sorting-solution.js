@@ -13,7 +13,7 @@ function pila(maximo) {
 
 function entrada(element) {
   if (this.llena()) {
-    console.log("Tu pila esta llena, debes eliminar elementos")
+    console.log("pila llena")
   } else {
     this.Tamaño_Pila.unshift(element)
   }
@@ -21,7 +21,7 @@ function entrada(element) {
 
 function salida() {
   if (this.vacia()) {
-    console.log("Tu pila esta vacia, debes introducir elementos")
+    console.log("pila vacia, introduce elementos")
   }
   else {
     return this.Tamaño_Pila.shift()
