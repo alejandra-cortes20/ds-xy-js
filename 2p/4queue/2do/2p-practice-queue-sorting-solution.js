@@ -13,7 +13,7 @@ function fila(maximo) {
 }
 function entrada(element) {
   if (this.llena()) {
-    console.log("Tu fila esta llena, debes eliminar elementos")
+    console.log("fila llena, elimina elementos")
   } else {
     this.Tamaño_Fila.push(element)
   }
@@ -21,7 +21,7 @@ function entrada(element) {
 
 function salida() {
   if (this.vacia()) {
-    console.log("Tu fila esta vacia, debes introducir elementos")
+    console.log("fila vacia, introduce elementos")
   }
   else {
     return this.Tamaño_Fila.shift()
@@ -89,10 +89,10 @@ function ord_fila(x) {
     }
     pt[j - 1] = pasos;
     console.log(f.mostrar())
-    console.log("Los pasos en el ciclo " + j + " de " + x + " numeros aleatorios son: " + pasos)
+    console.log("pasos del ciclo " + j + " de " + x + " numeros aleatorios " + pasos)
     var end = Date.now()
     tt[j - 1] = end - start
-    console.log("El tiempo requerido en el ciclo " + j + " de " + x + " numeros aleatorios son: " + tt[j - 1] + "s")
+    console.log("tiempo requerido en el ciclo " + j + " de " + x + " numeros aleatorios " + tt[j - 1] + "s")
     pasos = 0
   }
 }
@@ -101,30 +101,30 @@ pt[5] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4]) / (5)
 pt[6] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4])
 tt[5] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4]) / (5)
 tt[6] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4])
-console.log("El promedio de pasos totales es: " + pt[5])
-console.log("Total de Pasos: " + pt[6])
-console.log("El promedio de tiempo total es: " + tt[5] + "s")
-console.log("Total de tiempo: " + tt[6] + "s")
-console.log("----5 veces 10----")
+console.log("promedio de pasos totales en 10 numeros aleatorios " + pt[5])
+console.log("total de Pasos en 10 numeros aleatorios: " + pt[6])
+console.log("promedio de tiempo total en 10 numeros aleatorios" + tt[5] + "s")
+console.log("total de tiempo en 10 numeros aleatorios: " + tt[6] + "s")
+console.log("-10-")
 //-------------------------------------------------------------
 ord_fila(100)
 pt[5] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4]) / (5)
 pt[6] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4])
 tt[5] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4]) / (5)
 tt[6] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4])
-console.log("El promedio de pasos totales es: " + pt[5])
-console.log("Total de Pasos: " + pt[6])
-console.log("El promedio de tiempo total es: " + tt[5] + "s")
-console.log("Total de tiempo: " + tt[6] + "s")
-console.log("----5 veces 100----")
+console.log("promedio de pasos totales en 100 numeros aleatorios " + pt[5])
+console.log("total de Pasos en 100 numeros aleatorios : " + pt[6])
+console.log("promedio de tiempo total en 100 numeros aleatorios " + tt[5] + "s")
+console.log("Total de tiempo en 100 numeros aleatorios: " + tt[6] + "s")
+console.log("-100-")
 //-------------------------------------------------------------
 ord_fila(1000)
 pt[5] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4]) / (5)
 pt[6] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4])
 tt[5] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4]) / (5)
 tt[6] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4])
-console.log("El promedio de pasos totales es: " + pt[5])
-console.log("Total de Pasos: " + pt[6])
-console.log("El promedio de tiempo total es: " + tt[5] + "s")
-console.log("Total de tiempo: " + tt[6] + "s")
-console.log("----5 veces 1000----")
+console.log("promedio de pasos totales en 1000 numeros aleatorios " + pt[5])
+console.log("Total de pasos en 1000 numeros aleatorios " + pt[6])
+console.log("promedio de tiempo total en 1000 numeros aleatorios " + tt[5] + "s")
+console.log("Total de tiempo en 1000 numeros aleatorios " + tt[6] + "s")
+console.log("-1000-")

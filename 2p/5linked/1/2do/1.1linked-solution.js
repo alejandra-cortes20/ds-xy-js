@@ -1,17 +1,17 @@
 import { Linked, Node } from '../../../../agcl/linked/node5es.js'
 
-let patito1 = new Node('patito1')
-let patito2 = new Node('patito2')
+let num_1 = new Node('num_1')
+let num_2 = new Node('num_2')
 
-let mama_patito = new Linked(patito1)
+let number = new Linked(num_1)
 
-mama_patito.append(patito2)
-mama_patito.append(new Node('patito3'))
-mama_patito.append(new Node('patito4'))
+number.append(num_2)
+number.append(new Node('num_3'))
+number.append(new Node('num_4'))
 
-mama_patito.traverse(mama_patito.getHead())
+number.traverse(number.getHead())
 
-console.log(mama_patito.contains('patito2'))
-console.log(mama_patito.contains('una abeja'))
+console.log(number.contains('num_2'))
+console.log(number.contains('hola'))
 
-console.log(mama_patito.getTail())
+console.log(number.getTail())

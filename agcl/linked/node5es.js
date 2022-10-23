@@ -49,24 +49,24 @@ function traverse() {
 //
 function contains(v) {
   let c = this.head
-  let patito = false;
+  let num = false;
   while (c) {//exists
     if (v == c.data) {
-      patito = c.data
+      num = c.data
     }
     c = c.next
   }
-  return patito
+  return num
 
 }
 function getTail() {
   let c = this.head
-  let ultimo_patito = ""
+  let ultimo_ = ""
   while (c) {
-    ultimo_patito = c.data
+    ultimo_ = c.data
     c = c.next
   }
-  return ultimo_patito
+  return ultimo_
 }
 //Metodos nuevos
 function InsertAfter(nueva_letra, colocar) {
