@@ -1,5 +1,5 @@
-function cola() {
-  this.Tamaño_Cola = []
+function queue() {
+  this.Tamaño_queue = []
   this.max = 5
   this.entrada = entrada
   this.salida = salida
@@ -11,31 +11,31 @@ function cola() {
 
 function entrada(element) {
   if (this.llena()) {
-    console.log("Tu fila esta llena, debes eliminar elementos")
+    console.log("fila llena, elimina elementos")
   }
   else {
-    this.Tamaño_Cola.push(element)
+    this.Tamaño_queue.push(element)
   }
 }
 
 function salida() {
   if (this.vacia()) {
-    console.log("Tu fila esta vacia, debes introducir elementos")
+    console.log("fila vacia, introduce elementos")
   }
   else {
-    this.Tamaño_Cola.shift()
+    this.Tamaño_queue.shift()
   }
 }
 
 function llena() {
-  if (this.Tamaño_Cola.length === this.max)
+  if (this.Tamaño_queue.length === this.max)
     return true
   else
     return false
 }
 
 function vacia() {
-  if (this.Tamaño_Cola.length === 0)
+  if (this.Tamaño_queue.length === 0)
     return true
   else
     return false
@@ -43,13 +43,13 @@ function vacia() {
 
 function mostrar() {
   let show = ""
-  for (let i = 0; i < this.Tamaño_Cola.length; ++i) {
-    show += this.Tamaño_Cola[i] + "\n"
+  for (let i = 0; i < this.Tamaño_queue.length; ++i) {
+    show += this.Tamaño_queue[i] + "\n"
   }
   return show
 }
 
-let prueba = new cola();
+let prueba = new queue();
 
 prueba.entrada("rosa")
 prueba.entrada("morado")
