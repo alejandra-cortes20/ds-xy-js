@@ -96,7 +96,7 @@ function ord_fila(x) {
     pasos = 0
   }
 }
-
+ord_fila(10)
 pt[5] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4]) / (5)
 pt[6] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4])
 tt[5] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4]) / (5)
