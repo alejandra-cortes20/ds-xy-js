@@ -1,126 +1,126 @@
-var pt = []
-var tt = []
-function pila(maximo) {
-  this.Tamaño_Pila = []
-  this.max = maximo
+var y = []
+var z = []
+function pila(max) {
+  this.tam_pila = []
+  this.max = max
   this.llena = llena
-  this.vacia = vacia
-  this.entrada = entrada
-  this.salida = salida
-  this.mostrar = mostrar
+  this.vacio = vacio
+  this.entrada = ent
+  this.salida = exit
+  this.mostrar = most
   this.peek = peek
 }
 
-function entrada(element) {
+function ent(element) {
   if (this.llena()) {
     console.log("stack llena")
   } else {
-    this.Tamaño_Pila.unshift(element)
+    this.tam_pila.unshift(element)
   }
 }
 
-function salida() {
-  if (this.vacia()) {
+function exit() {
+  if (this.vacio()) {
     console.log("pila vacia, introduce elementos")
   }
   else {
-    return this.Tamaño_Pila.shift()
+    return this.tam_pila.shift()
   }
 }
 
 function llena() {
-  if (this.Tamaño_Pila.length === this.max)
+  if (this.tam_pila.length === this.max)
     return true
   else
     return false
 }
 
-function vacia() {
-  if (this.Tamaño_Pila.length === 0)
+function vacio() {
+  if (this.tam_pila.length === 0)
     return true
   else
     return false
 }
 
-function mostrar() {
-  let show = ""
-  for (let i = 0; i < this.Tamaño_Pila.length; ++i) {
-    show += this.Tamaño_Pila[i] + "\n"
+function most() {
+  let m = ""
+  for (let i = 0; i < this.tam_pila.length; ++i) {
+    m += this.tam_pila[i] + "\n"
   }
-  return show
+  return m
 }
 
 function peek() {
-  return this.Tamaño_Pila[0]
+  return this.tam_pila[0]
 }
 
-function ord_pila(x) {
+function pila_num(x) {
   let pasos = 0;
   for (let j = 1; j <= 5; j++) {
-    var start = Date.now()
-    let p = new pila(x);
-    let s = new pila(x);
-    let n, r;
+    var comenzar = Date.now()
+    let a = new pila(x);
+    let b = new pila(x);
+    let c, d;
     let i = 1;
-    n = Math.floor(Math.random() * (x - 1) + 1)
-    p.entrada(n)
+    c = Math.floor(Math.random() * (x - 1) + 1)
+    a.entrada(c)
     while (i < x) {
-      while (s.vacia() != true) {
-        p.entrada(s.salida())
+      while (b.vacio() != true) {
+        a.entrada(b.salida())
         pasos++
       }
-      r = Math.floor(Math.random() * (x - 1) + 1)
-      while (r <= p.peek() && p.vacia() != true) {
-        s.entrada(p.salida())
+      d = Math.floor(Math.random() * (x - 1) + 1)
+      while (d <= a.peek() && a.vacio() != true) {
+        b.entrada(a.salida())
         pasos++
       }
-      if (r >= p.peek() || p.vacia()) {
-        p.entrada(r)
+      if (d >= a.peek() || a.vacio()) {
+        a.entrada(d)
         pasos++
       }
       i++
     }
-    while (!s.vacia()) {
-      p.entrada(s.salida())
+    while (!b.vacio()) {
+      a.entrada(b.salida())
     }
-    pt[j - 1] = pasos;
-    console.log(p.mostrar())
+    y[j - 1] = pasos;
+    console.log(a.mostrar())
     console.log("pasos en el ciclo " + j + " de " + x + " numeros aleatorios son: " + pasos)
-    var end = Date.now()
-    tt[j - 1] = end - start
-    console.log("tiempo requerido en el ciclo " + j + " de " + x + " numeros aleatorios son: " + tt[j - 1] + "s")
+    var date = Date.now()
+    z[j - 1] = date - comenzar
+    console.log("tiempo requerido en el ciclo " + j + " de " + x + " numeros aleatorios son: " + z[j - 1] + "s")
     pasos = 0
   }
 }
-ord_pila(10)
-pt[5] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4]) / (5)
-pt[6] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4])
-tt[5] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4]) / (5)
-tt[6] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4])
-console.log("promedio de pasos totales en 10 numeros aleatorios " + pt[5])
-console.log("total de pasos en 10 numeros aleatorios: " + pt[6])
-console.log("tiempo promedio total en 10 numeros aleatorios " + tt[5] + "s")
-console.log("total de tiempo en 10 numeros aleatorios " + tt[6] + "s")
-console.log("----5 veces 10----")
+pila_num(10)
+y[5] = (y[0] + y[1] + y[2] + y[3] + y[4]) / (5)
+y[6] = (y[0] + y[1] + y[2] + y[3] + y[4])
+z[5] = (z[0] + z[1] + z[2] + z[3] + z[4]) / (5)
+z[6] = (z[0] + z[1] + z[2] + z[3] + z[4])
+console.log("promedio de pasos totales en 10 numeros aleatorios " + y[5])
+console.log("total de pasos en 10 numeros aleatorios: " + y[6])
+console.log("tiempo promedio total en 10 numeros aleatorios " + y[5] + "s")
+console.log("total de tiempo en 10 numeros aleatorios " + z[6] + "s")
+console.log("-10-")
 //-------------------------------------------------------------
-ord_pila(100)
-pt[5] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4]) / (5)
-pt[6] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4])
-tt[5] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4]) / (5)
-tt[6] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4])
-console.log("promedio de pasos totales en 100 numeros aleatorios" + pt[5])
-console.log("total de pasos en 100 numeros aleatorios " + pt[6])
-console.log("tiempo promedio total en 100 numeros aleatorios " + tt[5] + "s")
-console.log("tiempo total en 100 numeros aleatorios " + tt[6] + "s")
-console.log("----5 veces 100----")
+pila_num(100)
+y[5] = (y[0] + y[1] + y[2] + y[3] + y[4]) / (5)
+y[6] = (y[0] + y[1] + y[2] + y[3] + y[4])
+z[5] = (z[0] + z[1] + z[2] + z[3] + z[4]) / (5)
+z[6] = (z[0] + z[1] + z[2] + z[3] + z[4])
+console.log("promedio de pasos totales en 100 numeros aleatorios" + y[5])
+console.log("total de pasos en 100 numeros aleatorios " + y[6])
+console.log("tiempo promedio total en 100 numeros aleatorios " + z[5] + "s")
+console.log("tiempo total en 100 numeros aleatorios " + z[6] + "s")
+console.log("-100-")
 //-------------------------------------------------------------
-ord_pila(1000)
-pt[5] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4]) / (5)
-pt[6] = (pt[0] + pt[1] + pt[2] + pt[3] + pt[4])
-tt[5] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4]) / (5)
-tt[6] = (tt[0] + tt[1] + tt[2] + tt[3] + tt[4])
-console.log("promedio de pasos total en 1000 numeros aleatorios " + pt[5])
-console.log("total de pasos en 1000 numeros aleatorios " + pt[6])
-console.log("tiempo promedio total en 1000 numeros aleatorios " + tt[5] + "s")
-console.log("tiempo total en 1000 numeros aleatorios " + tt[6] + "s")
-console.log("----5 veces 1000----")
+pila_num(1000)
+y[5] = (y[0] + y[1] + y[2] + y[3] + y[4]) / (5)
+y[6] = (y[0] + y[1] + y[2] + y[3] + y[4])
+z[5] = (z[0] + z[1] + z[2] + z[3] + z[4]) / (5)
+z[6] = (z[0] + z[1] + z[2] + z[3] + z[4])
+console.log("promedio de pasos total en 1000 numeros aleatorios " + y[5])
+console.log("total de pasos en 1000 numeros aleatorios " + y[6])
+console.log("tiempo promedio total en 1000 numeros aleatorios " + z[5] + "s")
+console.log("tiempo total en 1000 numeros aleatorios " + z[6] + "s")
+console.log("-1000-")
